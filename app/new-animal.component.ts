@@ -52,13 +52,13 @@ import { Animal } from './animal.model';
 export class NewAnimalComponent {
   @Output() newAnimalSender = new EventEmitter();
   addAnimal(species: string, name: string, age: string, diet: string, location: string, caretakers: string, sex: string, likes: string, dislikes: string) {
-    if (species==="" || name==="" || age==="" || diet==="" || location==="" || caretakers==="" || sex==="" || likes==="" || dislikes===""){
+    if (species === "" || name === "" || age === "" || diet === "" || location === "" || caretakers === "" || sex === "" || likes === "" || dislikes === ""){
       alert("You must fill out all form fields");
     } else {
-      var convertedAge = Number(age);
-      var convertedCaretakers = Number(caretakers);
-      var newAnimalToAdd: Animal = new Animal(species, name, convertedAge, diet, location, convertedCaretakers, sex, likes, dislikes);
-      this.newAnimalSender.emit(newAnimalToAdd);
-    }
+    var convertedAge = Number(age);
+    var convertedCaretakers = Number(caretakers);
+    var newAnimalToAdd: Animal = new Animal(species, name, convertedAge, diet, location, convertedCaretakers, sex, likes, dislikes);
+    this.newAnimalSender.emit(newAnimalToAdd);
   }
+}
 }
