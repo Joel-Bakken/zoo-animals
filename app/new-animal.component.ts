@@ -52,8 +52,8 @@ import { Animal } from './animal.model';
 export class NewAnimalComponent {
   @Output() newAnimalSender = new EventEmitter();
   addAnimal(species: string, name: string, age: string, diet: string, location: string, caretakers: string, sex: string, likes: string, dislikes: string) {
-    if (species==="" || name==="" || age==="" || diet==="" || location==="" || sex===""){
-      alert("You must fill out the Species, Name, Age, Diet, Location and Sex fields");
+    if (species==="" || name==="" || age==="" || diet==="" || location==="" || caretakers==="" || sex==="" || likes==="" || dislikes===""){
+      alert("You must fill out all form fields");
     } else {
       var convertedAge = Number(age);
       var convertedCaretakers = Number(caretakers);
